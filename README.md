@@ -1,2 +1,1 @@
-# Team Source Casper
-[CH Casper](https://t.me/Cispar)
+# ↗️TEAM [Casper](https://t.me/Cispar)
