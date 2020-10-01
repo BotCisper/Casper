@@ -16,44 +16,30 @@ local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-io.write('\n\27[1;31m
-
-܁𖠐︙Token Is Communication Error\n التوكن غلط جرب مره اخره \n\27[0;39;49m')
+io.write('\n\27[1;31m܁𖠐︙Token Is Communication Error\n التوكن غلط جرب مره اخره \n\27[0;39;49m')
 else
-io.write('\n\27[1;31m
-
-܁𖠐︙Done Save Token : تم حفظ التوكن \n\27[0;39;49m')
+io.write('\n\27[1;31m܁𖠐︙Done Save Token : تم حفظ التوكن \n\27[0;39;49m')
 redis:set(Server_Casper.."Token_DevCasper",token)
 end 
 else
-io.write('\n\27[1;31m
-
-܁𖠐︙Token was not saved \n لم يتم حفظ التوكن \n\27[0;39;49m')
+io.write('\n\27[1;31m܁𖠐︙Token was not saved \n لم يتم حفظ التوكن \n\27[0;39;49m')
 end 
 os.execute('lua Casper.lua')
 end
 ------------------------------------------------------------------------------------------------------------
 if not redis:get(Server_Casper.."User_DevCasper1") then
-io.write('\n\27[1;35m
-
-܁𖠐︙Send ID For Sudo : ارسل ايدي المطور الاساسي ...\n\27[0;39;49m')
+io.write('\n\27[1;35m܁𖠐︙Send ID For Sudo : ارسل ايدي المطور الاساسي ...\n\27[0;39;49m')
 local User_Sudo = io.read():gsub('@','')
 if User_Sudo ~= '' then
-io.write('\n\27[1;31m
-
-܁𖠐︙The ID Is Saved : تم حفظ ايدي المطور\n\27[0;39;49m')
+io.write('\n\27[1;31m܁𖠐︙The ID Is Saved : تم حفظ ايدي المطور\n\27[0;39;49m')
 redis:set(Server_Casper.."Id_DevCasper",User_Sudo)
-io.write('\n\27[1;35m
-
-܁𖠐︙Send UserName For Sudo : ارسل معرف المطور الاساسي ...\n\27[0;39;49m')
+io.write('\n\27[1;35m܁𖠐︙Send UserName For Sudo : ارسل معرف المطور الاساسي ...\n\27[0;39;49m')
 local User_Sudo2 = io.read():gsub('@','')
 if User_Sudo ~= '' then
 redis:set(Server_Casper.."User_DevCasper1",User_Sudo2)
 end
 else
-io.write('\n\27[1;31m
-
-܁𖠐︙The ID was not Saved : لم يتم حفظ ايدي المطور الاساسي\n\27[0;39;49m')
+io.write('\n\27[1;31m܁𖠐︙The ID was not Saved : لم يتم حفظ ايدي المطور الاساسي\n\27[0;39;49m')
 end 
 os.execute('lua Casper.lua')
 end
