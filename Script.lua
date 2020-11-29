@@ -4563,11 +4563,11 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Status,
 return false
 elseif text and text:match("^زخرفه (.*)$") then
 local TextZhrfa = text:match("^زخرفه (.*)$")
-zh = https.request('https://ahmedcg4.ml/A.php?text='..URL.escape(TextZhrfa)..'')
+zh = https.request('https://kk38abodypole.ga/API%20ZAKRAFA/en.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
 t = "\n$ قائمه الزخرفه \n............................\n"
 i = 0
-for k,v in pairs(zx) do
+for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  "..v.." \n"
 end
