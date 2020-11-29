@@ -4561,6 +4561,18 @@ end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, Function_Status, nil)
 return false
+elseif text and text:match("^زخرفه (.*)$") and database:get(bot_id.." amir:zhrf_Bots"..msg.chat_id_) == "open" then
+local TextZhrfa = text:match("^زخرفه (.*)$")
+zh = https.request('https://ahmedcg4.ml/A.php?text='..URL.escape(TextZhrfa)..'')
+zx = JSON.decode(zh)
+t = "\n$ قائمه الزخرفه \n............................\n"
+i = 0
+for k,v in pairs(zx) do
+i = i + 1
+t = t..i.."-  "..v.." \n"
+end
+send(msg.chat_id_, msg.id_, t..'................................')
+end
 elseif text == "سمايلات" or text == "سمايل" then
 if redis:get(bot_id.."Status:Lock:Game:Group"..msg.chat_id_) then
 redis:del(bot_id.."Status:Set:Sma"..msg.chat_id_)
